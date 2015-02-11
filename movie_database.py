@@ -30,9 +30,10 @@ class Movie:
         return best_movie
 
     def plot(self):
-        webservice_url = "http://www.omdbapi.com/?i=%s&plot=short&r=json" % (self.imdb_id)
+
+        webservice_url = "http://www.omdbapi.com/?i=%s&plot=short&r=json" \
+            % (self.imdb_id)
         data = urlopen(webservice_url).read().decode("utf8")
         result = json.loads(data)
-        p = result['Plot']
-        return p
-
+        plot = result['Plot']
+        return plot
