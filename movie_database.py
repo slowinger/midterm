@@ -35,5 +35,5 @@ class Movie:
             % (self.imdb_id)
         data = urlopen(webservice_url).read().decode("utf8")
         result = json.loads(data)
-        plot = result['Plot']
-        return plot
+        movie_plot = result['Plot']
+        return movie_plot
