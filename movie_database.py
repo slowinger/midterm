@@ -2,6 +2,7 @@ import csv
 from urllib.request import urlopen
 import json
 
+
 class Movie:
 
     def read_file(file_input):
